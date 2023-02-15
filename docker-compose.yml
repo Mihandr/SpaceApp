@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15.2
+    env_file: .env
+    volumes:
+      - ./dockerfiles/pgdata:/var/lib/postgresql/data/pgdata
+    ports:
+      - "5433:5432"
+volumes:
+  postgres_data:
+
